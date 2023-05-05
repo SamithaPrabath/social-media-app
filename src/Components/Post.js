@@ -221,10 +221,10 @@ function Post(props) {
     else{
       addLike();
     }
-  }
+  };
 
   const addLike = () =>{
-    data={
+    const data={
       userID: user_name,
       postID:postID
     }
@@ -242,7 +242,7 @@ function Post(props) {
         console.log(err);
       });
     
-  }
+  };
 
   const removeLike = (id) =>{
     axios.delete(`http://localhost:8080/removeLike/${id}`)
@@ -253,7 +253,7 @@ function Post(props) {
       console.error(error);
     });
     
-  }
+  };
   
   return (
     <Container>
